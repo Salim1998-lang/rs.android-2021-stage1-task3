@@ -11,51 +11,51 @@ class TelephoneFinder {
         }
         val arrayList = ArrayList<String?>()
         for (j in number.indices) {
-            when {
-                number[j] == '1' -> {
+            when(number[j]) {
+                '1' -> {
                     arrayList.add(number.replace(number[j], '2'))
                     arrayList.add(number.replace(number[j], '4'))
                 }
-                number[j] == '2' -> {
+                '2' -> {
                     arrayList.add(number.replace(number[j], '1'))
                     arrayList.add(number.replace(number[j], '3'))
                     arrayList.add(number.replace(number[j], '5'))
                 }
-                number[j] == '3' -> {
+                '3' -> {
                     arrayList.add(number.replace(number[j], '2'))
                     arrayList.add(number.replace(number[j], '6'))
                 }
-                number[j] == '4' -> {
+                '4' -> {
                     arrayList.add(number.replace( number[j], '1'))
                     arrayList.add(number.replace(number[j], '5'))
                     arrayList.add(number.replace(number[j], '7'))
                 }
-                number[j] == '5' -> {
+                '5' -> {
                     arrayList.add(number.replace(number[j], '2'))
                     arrayList.add(number.replace(number[j], '4'))
                     arrayList.add(number.replace(number[j], '6'))
                     arrayList.add(number.replace(number[j], '8'))
                 }
-                number[j] == '6' -> {
+                '6' -> {
                     arrayList.add(number.replace(number[j], '3'))
                     arrayList.add(number.replace(number[j], '5'))
                     arrayList.add(number.replace(number[j], '9'))
                 }
-                number[j] == '7' -> {
+                '7' -> {
                     arrayList.add(number.replace(number[j], '4'))
                     arrayList.add(number.replace(number[j], '8'))
                 }
-                number[j] == '8' -> {
+                '8' -> {
                     arrayList.add(number.replace(number[j], '5'))
                     arrayList.add(number.replace(number[j], '7'))
                     arrayList.add(number.replace(number[j], '9'))
-                    arrayList.add(number.replaceRange(j..j, "0"))
+                    arrayList.add(number.replace(number[j], '0'))
                 }
-                number[j] == '9' -> {
+                '9' -> {
                     arrayList.add(number.replace(number[j], '6'))
                     arrayList.add(number.replace(number[j], '8'))
                 }
-                number[j] == '0' -> {
+                '0' -> {
                     arrayList.add(number.replace(number[j], '8'))
                 }
             }
