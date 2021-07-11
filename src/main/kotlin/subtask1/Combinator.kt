@@ -21,6 +21,4 @@ class Combinator {
         }
         return f
     }
-
-
 }
